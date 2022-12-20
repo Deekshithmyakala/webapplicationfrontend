@@ -31,7 +31,7 @@ class SignUp extends Component {
           body: JSON.stringify(payload),
         };
 
-        fetch("http://localhost:8080/users", requestOptions)
+        fetch("https://webapplication.herokuapp.com/users", requestOptions)
           .then((response) => response.json())
           .then((data) => {
             localStorage.setItem("users", JSON.stringify(user));
