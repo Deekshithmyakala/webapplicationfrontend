@@ -18,7 +18,7 @@ class Post extends Component {
   }
 
   getComments = () => {
-    fetch("https://webapplication.herokuapp.com/comments/" + this.props.id)
+    fetch("https://webapplicationbackend.herokuapp.com/comments/" + this.props.id)
       .then((response) => response.json())
       .then((data) => {
         this.setState({ commentList: data });
@@ -43,7 +43,7 @@ class Post extends Component {
           body: JSON.stringify(payload),
         };
 
-        fetch("https://webapplication.herokuapp.com/comments", requestOptions)
+        fetch("https://webapplicationbackend.herokuapp.com/comments", requestOptions)
           .then((response) => response.json())
           .then((data) => {
             this.getComments();
