@@ -16,7 +16,7 @@ class StatusBar extends Component {
   }
 
   getData = () => {
-    fetch("https://webapplication.herokuapp.com/status")
+    fetch("https://webapplicationbackend.herokuapp.com/status")
       .then((response) => response.json())
       .then((data) => {
         this.setState({ statusList: data });
@@ -50,7 +50,7 @@ class StatusBar extends Component {
             body: JSON.stringify(payload),
           };
 
-          fetch("https://webapplication.herokuapp.com/status", requestOptions)
+          fetch("https://webapplicationbackend.herokuapp.com/status", requestOptions)
             .then((response) => response.json())
             .then((data) => {
               thisContext.getData();
