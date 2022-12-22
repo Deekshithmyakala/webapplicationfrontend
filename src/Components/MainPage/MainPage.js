@@ -21,7 +21,7 @@ class MainPage extends Component {
     //API
     const thisContext = this;
 
-    fetch("https://webapplicationbackend.herokuapp.com/posts")
+    fetch("https://webapplicationbackend.herokuapp.com/post")
       .then((response) => response.json())
       .then((data) => {
         thisContext.setState({ postArray: data });
