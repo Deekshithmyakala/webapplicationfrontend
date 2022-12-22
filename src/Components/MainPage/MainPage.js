@@ -59,7 +59,7 @@ class MainPage extends Component {
             body: JSON.stringify(payload),
           };
 
-          fetch("https://webapplicationbackend.herokuapp.com/post", requestOptions)
+          fetch("https://webapplicationbackend.herokuapp.com/posts", requestOptions)
             .then((response) => response.json())
             .then((data) => {
               console.log(data);
